@@ -9,7 +9,7 @@ class StockRequest(models.Model):
 
     purchase_ids = fields.One2many('purchase.order',
                                    compute='_compute_purchase_ids',
-                                   string='Pickings', readonly=True)
+                                   string='Purchase Orders', readonly=True)
     purchase_count = fields.Integer(string='Purchase count',
                                     compute='_compute_purchase_ids',
                                     readonly=True)
